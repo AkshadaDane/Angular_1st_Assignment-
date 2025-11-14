@@ -1,12 +1,15 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from "@angular/core";
+import { UserProfile } from "./user-profile/user-profile";
+import { CommonModule } from "@angular/common";
 
 @Component({
-  selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.html',
-  styleUrl: './app.css'
+  selector:'app-root',
+  standalone:true,
+  imports:[CommonModule, UserProfile],
+  templateUrl:'./app.html',
+  styleUrl:'./app.css'
 })
-export class App {
-  protected readonly title = signal('Assignment1');
+
+export class App{
+
 }

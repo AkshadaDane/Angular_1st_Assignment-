@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="input">
+        <h4>{{Name}}</h4>
+        <h4>{{Email}}</h4>
+        <img [src]="Image" alt="Profile_image" height="100px" width="100px"><br>
+        <button (click)="toggle()">{{showDetails ? 'Hide details' : 'show Details'}}</button>
+    </div>
+    <div *ngIf="showDetails">
+        <h4>Profile Details</h4>
+        <p>{{Bio}}</p>
+
+        Name : <input [(ngModel)]="Name">
+        <br><br>
+        Bio : <textarea [(ngModel)]="Bio"></textarea>
+    </div>
+</div>
